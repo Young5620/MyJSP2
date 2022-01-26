@@ -152,9 +152,39 @@ http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&ejkGb=KOR&barcod
    - COMMIT : 트랜잭션 처리, 변경된 데이터를 최종적용
    - ROLLBACK : 트랜잭션 처리, 변경된 데이터를 적용하지않고 이전으로 되돌림
 
+===============================================================
+
+## SQL 명령어
+1. 데이터베이스 정의어(CREATE, ALTER, DROP)
+  - CREATE : 객체생성
+
+   -DB생성-
+   CREATE DATABASE databasename;
+
+   -DB내에 Table생성-
+   CREATE TABLE table_name( => 테이블 생성
+     column datatype            => 테이블내에  열생성
+     column datatype
+     column datatype
+     );
+
+   -추가 - DB에서 사용되는 용어
+    - table/relation : 표, 데이터의 집합
+    - row/record/tuple : 테이블의 행에 해당
+    - column/field/attribute : 테이블의 열에 해당
+    - cell : 테이블에서 해과 열ㅇ의 교차점에 있는 특정 값이 저장된 위치
 
 
+  - ALTER : 객체 수정 -> 구조를 변경하고자 할 때
+    지정한 테이블에 컬럼을 추가하려고 할 때
+    ALTER TABLE table_name ADD column_name datatype;
+    실습) t_table에 korean(int), english(int), math(int)컬럼을 추가
+    실습) t_table에 korean varchar(5), math varchar(10) 추가하고 varchar->int로 변경
 
-
-
-
+=============================================================
+## UPDATE 실습예제
+  
+  syntex 문법
+   UPDATE table_name SET cloumn1=value1,cloumn2=value2...
+   **WHERE 조건문은 특정조건을 부여
+예시 
