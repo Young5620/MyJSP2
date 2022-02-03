@@ -31,7 +31,7 @@ public class join_ok extends HttpServlet {
 	//3.처리결과에 따른 뷰(view) 성공시 : success -> 성공메세지 출력
 	//                    실패시 : Fail -> 실패메세지 전송 -> 로그인 or 회원가입 페이지
 	request.setCharacterEncoding("utf-8");
-		
+	
 	String id = request.getParameter("id");
 	String pw = request.getParameter("pw");
 	String name = request.getParameter("name");
@@ -40,6 +40,16 @@ public class join_ok extends HttpServlet {
 	String email = request.getParameter("email");
 	String gender = request.getParameter("gender");
 	
+	//DAO객체 생성
+	MemberDAO dao = MemberDAO.getInstance();
+	
+	//VO객체 생성
+	MemberVO vo = new MemberVO(id, pw, name, phone1, phone2, email, gender);
+	
+	//DAO에 join메서드를 사용
+	int result = dao.join(vo);
+	
+	/*
 	String driver = "oracle.jdbc.driver.OracleDriver";
 	String url = "jdbc:oracle:thin:@localhost:1521/XEPDB1";
 	String user = "myjsp";
@@ -54,8 +64,8 @@ public class join_ok extends HttpServlet {
 //				+pw+"','"+name+"','"+phone1+"','"+phone2+"','"
 //				+email+"','"+gender+"')";
 	String sql = "insert into testusers values(?,?,?,?,?,?,?)";
-	
-	try {
+	*/
+/*	try {
 		Class.forName(driver);
 		conn = DriverManager.getConnection(url, user, password);
 //		stmt = conn.createStatement();
@@ -70,11 +80,13 @@ public class join_ok extends HttpServlet {
 		pstmt.setString(7, gender);
 		
 		int result = pstmt.executeUpdate();
+		*/
 		if(result==1) {
 			response.sendRedirect("join_success.jsp");
 		} else {
 			response.sendRedirect("join_fail.jsp");
 		}
+		/*
 	} catch(Exception e) {
 		e.printStackTrace();
 	} finally {
@@ -83,7 +95,7 @@ public class join_ok extends HttpServlet {
 			if(pstmt!=null) pstmt.close();
 			if(rs!=null) rs.close();
 		} catch(Exception e1) {}
-	}
+	}*/
 	}
 
 }

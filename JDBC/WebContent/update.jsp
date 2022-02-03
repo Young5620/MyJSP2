@@ -1,15 +1,25 @@
+<%@page import="com.ok.MemberVO"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
 	//id는 세션을 통해서 얻고, 회원정보는 request객체를 통해서 얻음
 	String id = (String)session.getAttribute("user_id");
-	String pw = (String)request.getAttribute("user_pw");
+	/* String pw = (String)request.getAttribute("user_pw");
 	String name = (String)request.getAttribute("user_name");
 	String phone1 = (String)request.getAttribute("user_phone1");
 	String phone2 = (String)request.getAttribute("user_phone2");
 	String email = (String)request.getAttribute("user_email");
-	String gender = (String)request.getAttribute("user_gender");
+	String gender = (String)request.getAttribute("user_gender"); */
 	
+	//vo를 이용한 값 받기
+	MemberVO vo = (MemberVO)request.getAttribute("vo");
+	
+	String pw = vo.getPw();
+	String name = vo.getName();
+	String phone1 = vo.getPhone1();
+	String phone2 = vo.getPhone2();
+	String email = vo.getEmail();
+	String gender = vo.getGender();
 %>    
 <!DOCTYPE html>
 <html>

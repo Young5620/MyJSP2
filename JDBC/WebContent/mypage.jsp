@@ -7,7 +7,6 @@
 	}
 
 	String id = (String)session.getAttribute("user_id");
-	String name = (String)session.getAttribute("user_name");
 	
 %>    
 <!DOCTYPE html>
@@ -17,9 +16,9 @@
 <title>내 페이지</title>
 </head>
 <body>
-	<h2><%=id %>(<%=name %>)님 환영합니다.</h2>
+	<h2><%=id %>님 환영합니다.</h2>
 	<a href="logout.jsp">로그아웃</a>
 	<a href="modify_ok">회원정보 수정</a>
-	<a href="#">회원탈퇴</a>
+	<a href="delete_ok">회원탈퇴</a>
 </body>
 </html>

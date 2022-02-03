@@ -13,7 +13,7 @@
 }
 </style>
 </head>
-<body>
+<body><div align="center">
 	<h2>로그인연습</h2>
 	<form action="login_ok" method="post">
 	<table>
@@ -31,5 +31,6 @@
 	</tr>
 	</table>
 	</form>
+	</div>
 </body>
 </html>
