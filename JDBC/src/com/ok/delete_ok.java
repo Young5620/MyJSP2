@@ -23,9 +23,8 @@ public class delete_ok extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		/*
 		 delete from 테이블명 where = id
-		 1. 아이디는 세션에서 얻는다.
-		 2. pstmt를 이용해서 삭제를 진행
-		 3. 사용 메서드는 executeUpdate()로 sql문을 실행...(인자x)
+		 1. 아이디는 세션에서 얻는다. DAO에 delete(id) 메서드를 생성
+		 2. 메서드 생성시에 executeUpdate()메서드를 사용하여 delete()메서드에서 값을 반환
 		 	->1을 반환 : 쿼리 성공 -> 세션을 전부 삭제후에 login.jsp로 이동
 		 	->0을 반환 : 쿼리 실패 -> mypage.jsp
 		 */
