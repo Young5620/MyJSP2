@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-
+<!DOCTYPE html>
+<html>
 <!-- header -->
 <%@ include file="../include/_header.jsp" %>
 <!-- /.header -->
@@ -38,7 +39,7 @@
     </tr>
     </table>
     <input type="button" value="회원가입" class="btn-primary" onclick="check()">
-    <input type="button" value="로그인" class="btn-info">
+    <input type="button" value="로그인" class="btn-info" onclick="location.href='user_login.jsp'">
     </form>
   </div>
 </section>
