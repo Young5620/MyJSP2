@@ -30,15 +30,15 @@
 		//이름이 변경되었다면 세션에 저장되어있던 이름을 변경해줘야한다.
 		session.setAttribute("user_name", vo.getName());
 %>
-	<script>
-		alert("회원정보가 수정되었습니다.");
-		location.href="user_mypage.jsp";
-	</script>
+		<script>
+			alert("회원정보가 수정되었습니다.");
+			location.href="user_mypage.jsp";
+		</script>
 <%	} else { //정보수정 실패 
 %>
-	<script>
-		alert("회원정보 수정에 실패했습니다.");
-		location.href="user_mypage.jsp";
-	</script>		
+		<script>
+			alert("회원정보 수정에 실패했습니다.");
+			location.href="user_mypage.jsp";
+		</script>		
 <%	}
 %>    

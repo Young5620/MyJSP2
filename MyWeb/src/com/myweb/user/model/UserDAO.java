@@ -89,6 +89,7 @@ public class UserDAO {
 			pstmt.setString(5, vo.getAddress());
 			
 			result = pstmt.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -162,6 +163,7 @@ public class UserDAO {
 			pstmt.setString(2, id);
 			
 			result = pstmt.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -183,6 +185,7 @@ public class UserDAO {
 			pstmt.setString(4, vo.getId());
 			
 			result = pstmt.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
@@ -203,6 +206,7 @@ public class UserDAO {
 			pstmt.setString(1, id);
 			
 			result = pstmt.executeUpdate();
+			
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {

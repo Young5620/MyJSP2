@@ -27,22 +27,21 @@
 	
 	if(result==1) {
 		//비밀번호 변경 실행
-		int result2 = dao.changePassword(id, newpw);
-		%>
-			<%if(result2==1) {%>
-				<script>
-					alert("비밀번호 변경처리 되었습니다.");
-					location.href="user_mypage.jsp";
-				</script>	
-			<%}else{%>
-				<script>
-					alert("비밀번호 변경에 실패했습니다.");
-					location.href="user_mypage.jsp";
-				</script>
-			<%}%>
+		int result2 = dao.changePassword(id, newpw);%>
+		<%if(result2==1) {%>
+			<script>
+				alert("비밀번호 변경처리 되었습니다.");
+				location.href="user_mypage.jsp";
+			</script>	
+		<%}else{%>
+			<script>
+				alert("비밀번호 변경에 실패했습니다.");
+				location.href="user_mypage.jsp";
+			</script>
+		<%}%>
 	<%}else {//예전 비밀번호 입력 실패%>
 		<script>
 			alert("비밀번호 변경에 실패했습니다. 다시 입력해주세요");
 			history.go(-1);
 		</script>
-	<%}%>    
+	<%}%>

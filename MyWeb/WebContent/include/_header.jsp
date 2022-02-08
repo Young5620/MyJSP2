@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>   
 <head>
 
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -70,21 +71,24 @@
                     </li>
                     <!-- session이 없다면 로그인과 조인메뉴로 표시
                     	session이 존재하는경우 logout과 MyPage가 출력 -->
-                    <% if(session.getAttribute("user_id")==null) {%>
+                    <c:choose>
+                    <c:when test="${sessionScope.user_id ==null }">
                     <li>
                         <a href="/MyWeb/user/user_login.jsp">LOGIN</a>
                     </li>
                     <li>
                         <a href="/MyWeb/user/user_join.jsp" style="color:red">JOIN</a>
                     </li>
-                    <% }else{%>
+                    </c:when>
+                    <c:when test="${sessionScope.user_id !=null }">
                     <li>
                         <a href="/MyWeb/user/user_logout.jsp">LOGOUT</a>
                     </li>
                     <li>
                         <a href="/MyWeb/user/user_mypage.jsp" style="color:red">MyPage</a>
                     </li>
-                    <% }%>
+                    </c:when>
+                    </c:choose>
                 </ul>
             </div>
             

@@ -98,6 +98,7 @@
         
     </div>
     <!-- /.container -->
+    
 <!-- footer -->
 <%@ include file="../include/_footer.jsp" %>
 <!-- /.footer -->
