@@ -6,3 +6,12 @@
 - Database : DB데이터를 입력/수정/삭제/조회하는 기능을 제공
 - XML : XML문서를 처리할 때에 필요한 기능을 제공
 - Function : 문자열을 제공하는 함수 제공
+
+
+--Oracle 시퀀스 안맞는 경우 변경/수정
+--(해당값만큼 증가값을 변경)
+alter sequence board_num increment by -20;
+--변경된 값 확인
+select board_num.nextval from dual;
+--다시 증가값을 1로 변경
+alter sequence board_num increment by 1;

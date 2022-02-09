@@ -67,6 +67,7 @@
 			return; 
 	  } else if (document.regform.name.value==' ') {   
 			alert("이름은 필수사항 입니다.");
+			return;
 	  } else if (confirm("회원가입을 하시겠습니까?")) { 
 			//confirm() 확인창에 "예" 클릭하면 true를 반환, "아니오" 클릭시 false를 반환 
 			document.regform.submit(); //자바스크립트를 이용한 submit()기능 

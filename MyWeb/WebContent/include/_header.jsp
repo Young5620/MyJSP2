@@ -61,13 +61,13 @@
                 <ul class="nav navbar-nav">
                 	
                     <li>
-                        <a href="/MyWeb/">HOME</a>
+                        <a href="/MyWeb/index.do">HOME</a>
                     </li>
                     <li>
-                        <a href="/MyWeb/member/member.jsp">Member</a>
+                        <a href="/MyWeb/member.do">Member</a>
                     </li>
                     <li>
-                        <a href="#">BOARD</a>
+                        <a href="/MyWeb/board/list.board">BOARD</a>
                     </li>
                     <!-- session이 없다면 로그인과 조인메뉴로 표시
                     	session이 존재하는경우 logout과 MyPage가 출력 -->

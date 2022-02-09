@@ -18,7 +18,7 @@
                 
                 
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member7.jpg" alt="">
+                    <img class="img-responsive" src="img/member7.jpg" alt="">
                     <h3>Actor
                         <small>한지민</small>
                     </h3>
@@ -28,7 +28,7 @@
                     
                 </div>
                 <div class="col-sm-4 text-center">
-                  	<img class="img-responsive" src="../img/member8.jpg" alt="">
+                  	<img class="img-responsive" src="img/member8.jpg" alt="">
                     <h3>Age
                         <small>37</small>
                     </h3>
@@ -50,19 +50,19 @@
                     <hr>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member1.jpg" alt="">
+                    <img class="img-responsive" src="img/member1.jpg" alt="">
                     <h3>
                         <small></small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member2.jpg" alt="">
+                    <img class="img-responsive" src="img/member2.jpg" alt="">
                     <h3>
                         <small></small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member3.jpg" alt="">
+                    <img class="img-responsive" src="img/member3.jpg" alt="">
                     <h3>
                         <small></small>
                     </h3>
@@ -74,19 +74,19 @@
             <div class="box">
                 
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member4.jpg" alt="">
+                    <img class="img-responsive" src="img/member4.jpg" alt="">
                     <h3>
                         <small></small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member5.jpg" alt="">
+                    <img class="img-responsive" src="img/member5.jpg" alt="">
                     <h3>
                         <small></small>
                     </h3>
                 </div>
                 <div class="col-sm-4 text-center">
-                    <img class="img-responsive" src="../img/member6.jpg" alt="">
+                    <img class="img-responsive" src="img/member6.jpg" alt="">
                     <h3>
                         <small></small>
                     </h3>
