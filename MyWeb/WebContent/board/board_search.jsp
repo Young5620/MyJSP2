@@ -6,15 +6,6 @@
   <!-- header -->
   <%@ include file="../include/_header.jsp" %>
   <!-- /.header -->
-  <style>
-  .btn {
-  	border: 0;
-  	border-radius: 0;
-  	padding: 5px 10px;
-  	margin: 20px 0px;
-  }
-  </style>
-  
   <div class="container">
   	<h3>MyWeb 게시판</h3>
   	<table class="table table-bordered">

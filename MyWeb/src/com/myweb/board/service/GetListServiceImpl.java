@@ -1,4 +1,4 @@
-package com.myweb.controller;
+package com.myweb.board.service;
 
 import java.util.List;
 
@@ -7,7 +7,6 @@ import javax.servlet.http.HttpServletResponse;
 
 import com.myweb.board.model.BoardDAO;
 import com.myweb.board.model.BoardVO;
-import com.myweb.board.service.IBoardService;
 
 public class GetListServiceImpl implements IBoardService {
 

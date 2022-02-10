@@ -9,9 +9,7 @@
 		response.sendRedirect("user_login.jsp");
 	} 
 	
-	request.setCharacterEncoding("utf-8");
-	String id = (String)session.getAttribute("user_id");
-	String name = (String)session.getAttribute("user_name");	
+	request.setCharacterEncoding("utf-8");	
 %>  
  
 <!DOCTYPE html>
@@ -23,7 +21,7 @@
     <div align="center">
       <h2>Mypage</h2>
       <hr>
-      ${id}(${name})님의 회원정보 관리합니다.
+      ${sessionScope.user_id}(${sessionScope.user_name})님의 회원정보 관리합니다.
       <hr>
       <input type="button" value="비밀번호 변경" class="btn btn-default" onclick="location.href='user_change_pw.jsp'">
       <input type="button" value="회원정보 변경" class="btn btn-primary" onclick="location.href='user_update.jsp'">

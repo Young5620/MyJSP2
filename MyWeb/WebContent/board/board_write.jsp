@@ -15,7 +15,7 @@
   	    <table border="1" width="500">
   	      <tr>
   	        <td>작성자</td>
-  	        <td><input type="text" name="writer" size="10"></td>
+  	        <td><input type="text" name="writer" size="10" value="${sessionScope.user_id }"></td>
   	      </tr>
   	      <tr>
   	        <td>글 제목</td>
