@@ -61,13 +61,18 @@
   	<!-- 페이지 작업하는 공간 -->
   	<div align="center">
 	  <ul class="pagination pagination-sm">
-	    <li><a href="#">이전</a></li>
-	    <li><a href="#">1</a></li>
-	    <li><a href="#">2</a></li>
-	    <li><a href="#">3</a></li>
-	    <li><a href="#">4</a></li>
-	    <li><a href="#">5</a></li>
-	    <li><a href="#">다음</a></li>
+	    <!-- PageVO를 이용한 버튼 활성화 작업 -->
+	    <c:if test="${PageVO.prev }">
+	      <li><a href="list.board?pageNum=${PageVO.startPage-1 }">이전</a>
+	    </c:if>
+	    <!-- 페이지 번호 처리 -->
+	    <c:forEach var="num" begin="${PageVO.startPage }" end="${PageVO.endPage }">
+	      <li class="${num == PageVO.pageNum ? 'active' : ''}"><a href="list.board?pageNum=${num }">${num}</a>
+	    </c:forEach>
+	    <c:if test="${PageVO.next }">
+	      <li><a href="list.board?pageNum=${PageVO.endPage+1 }">다음</a></li>
+	    </c:if>
+	    
 	  </ul>  	
   	</div>
   </div>

@@ -22,7 +22,7 @@
 	  
 	  <!-- DB로부터 게시글 정보를 알아서 전달 -->
 	  <tbody>
-	  <c:forEach var="vo" items="${list }">
+	  <c:forEach var="vo" items="${search }">
 	    <tr>
 	      <td>${vo.num }</td>
 	      <td>${vo.writer}</td>

@@ -14,6 +14,7 @@ import com.myweb.board.service.DeleteServiceImpl;
 import com.myweb.board.service.GetListServiceImpl;
 import com.myweb.board.service.IBoardService;
 import com.myweb.board.service.RegisterServiceImpl;
+import com.myweb.board.service.SearchServiceImpl;
 import com.myweb.board.service.UpdateServiceImpl;
 
 @WebServlet("*.board")
@@ -103,6 +104,13 @@ public class BoardController extends HttpServlet {
 			service.execute(request, response);
 			
 			response.sendRedirect("list.board");
+		} else if(command.equals("/board/search.board")) {
+			//제목 검색
+			service = new SearchServiceImpl();
+			service.execute(request, response);
+			
+			RequestDispatcher dp = request.getRequestDispatcher("board_search.jsp");
+			dp.forward(request, response);
 		}
 	}
 }
