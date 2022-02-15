@@ -2,27 +2,53 @@
 
 <beans xmlns="http://www.springframework.org/schema/beans" 
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:context="http://www.springframework.org/schema/context"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans 
-	http://www.springframework.org/schema/beans/spring-beans.xsd">
- 	<!-- 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/context 
+	http://www.springframework.org/schema/context/spring-context-4.3.xsd">
+	
+	<!-- 의존객체 자동 주입을 위해서는 컨포넌트 스캔을 사용, 컴포넌트 스캔은 @conponent로 설정된 bean으로 Ioc로 -->
+	<context:component-scan base-package="test02.ex01.construct" />
+	<context:component-scan base-package="test03.ex01.auto"/> 	
+	<!-- 
  	xmlns : 속성값은 네임스페이스로 태그를 식별하기 이름
  	xmlns:xsi : XML정보를 가리키는 주소
  	xsi:schemaLocation : 두개 값이 공백으로 구분됨. 첫번째는 네임스페이스 
  										       두번째는 참조할 네임스페이스가 있는 주소
  	 -->
-	<bean id="good" class="test01.SpringTest" />
-	<!-- DI테스트 -->
-	<bean id="chef" class="test02.ex01.construct.Chef" />
-	<!-- 생성자 주입 -->
-	<bean id="hotel" class="test02.ex01.construct.Hotel">
-	  <constructor-arg ref = "chef" />
+	<bean id="good" class="test01.SpringTest" scope="prototype"/>
+	<bean id="chef" class="test02.ex01.construct.Chef" >
+		<qualifier value="c1"></qualifier>
 	</bean>
+	<bean id="chef2" class="test02.ex01.construct.Chef" >
+		<qualifier value="c2"></qualifier>
+	</bean>
+	
+	<!-- DI테스트 -->
+	<!-- <bean id="chef" class="test02.ex01.construct.Chef" /> -->
+	<!-- 생성자 주입 -->
+	<!-- <bean id="hotel" class="test02.ex01.construct.Hotel">
+	  <constructor-arg ref = "chef" />
+	</bean> -->
 	
 	<bean id="DBdev" class="test02.ex02.setter.DatabaseDev">
 	  <property name="driver" value="oracle.jdbc.driver.OracleDriver" />
 	  <property name="url" value="jdbc:oracle:thin:@localhost:1521/XEPDB1" />
 	  <property name="uid" value="myjsp" />
 	  <property name="upw" value="myjsp" />
+	</bean>
+	
+	<bean class="test03.ex01.auto.MemTest" id="memTest">
+		<property value="myjsp" name="uid"/>
+		<property value="myjsp" name="upw"/>
+		<qualifier value="t1"/>
+	</bean>
+
+	<bean class="test03.ex01.auto.MemTest" id="memTest2">
+		<property value="myjsp2" name="uid"/>
+		<property value="myjsp2" name="upw"/>
+		<qualifier value="t2"/>
 	</bean>
  
  </beans>
